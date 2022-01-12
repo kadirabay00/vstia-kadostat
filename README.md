@@ -1,1 +1,0 @@
-# vstia-kadostat
