@@ -23,7 +23,7 @@ client.login(process.env.token);
 
 client.on ( "ready" , () => {
     console.log ( "Başarıyla", client.user.username + " İsmi İle Giriş Yapıldı!" );
-    console.log("Kado ❤️ Vestia")
+    console.log("Kado ❤️ Sunucu ismi")
 } );
 
  client.on("ready", async () => {
@@ -383,15 +383,15 @@ client.on ( "message" , async msg => {
 //-----------------------------------------------------------------------------------------------------------------------------------\\
 
             .setAuthor ( user.tag , user.avatarURL ( { "dynamic" : true } ) )
-            .setFooter('Kado ❤️ Vestia')
+            .setFooter('Developed By Kado <3')
             .setTimestamp()
             .setColor ( "RANDOM" )
             .setThumbnail ( user.avatarURL ( { "dynamic" : true } ) )
             .setColor ( "RANDOM" ).setDescription ( `${ üye } (${
                 üye.roles.highest
             }) kişisinin sunucu verileri;
-───────────────
-**➥ Sesli Sohbet İstatistiği:**
+**───────────────**
+**➥ Sesli Sohbet Bilgileri:**
 \`•\` Toplam: \`${ toplam }\`
 \`•\` Public Odalar: \`${ format }\`
 \`•\` Kayıt Odaları: \`${ toplamKayıt }\`
@@ -399,11 +399,10 @@ client.on ( "message" , async msg => {
 \`•\` Secret Odalar: \`${ toplamPriv }\`
 \`•\` Streamer Odaları: \`${ toplamAlone }\`
 \`•\` Oyun & Eğlence Odaları: \`${ toplamGame }\`
-───────────────
-**➥ Kanal Bilgileri:** (\`Toplam ${ sayi } kanalda durmuş\`)
-${ isimler.join ( "\n" ) }
-───────────────
-**➥ Mesaj Bilgileri:** (\`Toplam: ${ textTotal }\`)
+**───────────────**
+**➥ Sesli Kanal Bilgileri: (\`Toplam ${ sayi } kanalda bulunmuş\`)** ${ isimler.join ( "" )}
+**───────────────**
+**➥ Mesaj Bilgileri: (\`Toplam: ${ textTotal } Mesaj\`)**
 ${ liste }
     ` );
         msg.channel.send ( embed );
@@ -511,22 +510,20 @@ client.on ( "message" , async msj => {
         .setTimestamp()
         .setDescription ( `
         
-Sunucunun Toplam İstatistikleri;
+**${msj.guild.name}** sunucusunun toplam verileri
+**───────────────**
 
-**➥ En Aktif 5 Ses Kanalı**
+**➥ En aktif 5 ses kanalı**
 ${ arooy.join ( "\n" ) }
-
-**➥ En Aktif 5 Mesaj Kanalı**
+**➥ En aktif 5 mesaj kanalı**
 ${ arvy.join ( "\n" ) }
 
-**➥ Seste En Aktif İlk 5 Üye**
+**───────────────**
+
+**➥ Ses kanallarında en aktif ilk 5 üye**
 ${ arrays.join ( "\n" ) }
-
-**➥ Mesaj Kanallarında En Aktif 5 Üye**
+**➥ Mesaj kanallarında en aktif ilk 5 üye**
 ${ aruuy.join ( "\n" ) }
-
-**➥ En Aktif 5 Sesli Kanalı**
-${ arvey.join ( "\n" ) }
 
          ` )
     msj.channel.send ( toplam )
