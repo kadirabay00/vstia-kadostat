@@ -400,7 +400,8 @@ client.on ( "message" , async msg => {
 \`•\` Streamer Odaları: \`${ toplamAlone }\`
 \`•\` Oyun & Eğlence Odaları: \`${ toplamGame }\`
 **───────────────**
-**➥ Sesli Kanal Bilgileri: (\`Toplam ${ sayi } kanalda bulunmuş\`)** ${ isimler.join ( "" )}
+**➥ Sesli Kanal Bilgileri:** (\`Toplam ${ sayi } kanalda durmuş\`)
+${ isimler.join ( "\n" ) }
 **───────────────**
 **➥ Mesaj Bilgileri: (\`Toplam: ${ textTotal } Mesaj\`)**
 ${ liste }
